@@ -1,5 +1,29 @@
 import React from 'react';
 
+interface SearchInfo {
+    stages: string[];
+    query: string;
+    urls: string[] | string;
+    error?: string;
+}
+
+interface Message {
+    id: number;
+    content: string;
+    isUser: boolean;
+    type: string;
+    isLoading?: boolean;
+    searchInfo?: SearchInfo;
+}
+
+interface MessageAreaProps {
+    messages: Message[];
+}
+
+interface SearchStagesProps {
+    searchInfo?: SearchInfo;
+}
+
 const PremiumTypingAnimation = () => {
     return (
         <div className="flex items-center">
@@ -15,7 +39,7 @@ const PremiumTypingAnimation = () => {
     );
 };
 
-const SearchStages = ({ searchInfo }) => {
+const SearchStages: React.FC<SearchStagesProps> = ({ searchInfo }) => {
     if (!searchInfo || !searchInfo.stages || searchInfo.stages.length === 0) return null;
 
     return (
@@ -105,7 +129,7 @@ const SearchStages = ({ searchInfo }) => {
     );
 };
 
-const MessageArea = ({ messages }) => {
+const MessageArea: React.FC<MessageAreaProps> = ({ messages }) => {
     return (
         <div className="flex-grow overflow-y-auto bg-[#FCFCF8] border-b border-gray-100" style={{ minHeight: 0 }}>
             <div className="max-w-4xl mx-auto p-6">

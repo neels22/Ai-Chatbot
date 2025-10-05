@@ -8,7 +8,8 @@ import React, { useState } from 'react';
 interface SearchInfo {
   stages: string[];
   query: string;
-  urls: string[];
+  urls: string[] | string;
+  error?: string;
 }
 
 interface Message {
@@ -30,9 +31,9 @@ const Home = () => {
     }
   ]);
   const [currentMessage, setCurrentMessage] = useState("");
-  const [checkpointId, setCheckpointId] = useState(null);
+  const [checkpointId, setCheckpointId] = useState<string | null>(null);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (currentMessage.trim()) {
       // First add the user message to the chat
@@ -71,7 +72,7 @@ const Home = () => {
         ]);
 
         // Create URL with checkpoint ID if it exists
-        let url = `http://localhost:8000/chat_stream/${encodeURIComponent(userInput)}`;
+        let url = `https://ai-chatbot-server-e5v8.onrender.com/chat_stream/${encodeURIComponent(userInput)}`;
         if (checkpointId) {
           url += `?checkpoint_id=${encodeURIComponent(checkpointId)}`;
         }
@@ -79,7 +80,7 @@ const Home = () => {
         // Connect to SSE endpoint using EventSource
         const eventSource = new EventSource(url);
         let streamedContent = "";
-        let searchData = null;
+        let searchData: SearchInfo | null = null;
         let hasReceivedContent = false;
 
         // Process incoming messages
