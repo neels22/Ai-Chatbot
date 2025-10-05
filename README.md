@@ -17,19 +17,30 @@ A modern, full-stack AI chatbot application with real-time web search capabiliti
 
 ---
 
+## 🎥 Demo
+
+Watch the AI Chatbot in action:
+
+https://github.com/neels22/Ai-Chatbot/assets/demo.mov
+
+*Experience real-time streaming responses, web search integration, and the beautiful glassmorphic UI in action!*
+
+---
+
 ## 📋 Table of Contents
 
-1. [Features](#-features)
-2. [Tech Stack](#-tech-stack)
-3. [Architecture](#-architecture)
-4. [How It Works](#-how-it-works)
-5. [Components](#-components)
-6. [Project Structure](#-project-structure)
-7. [Installation](#-installation)
-8. [Environment Variables](#-environment-variables)
-9. [API Endpoints](#-api-endpoints)
-10. [Deployment](#-deployment)
-11. [Usage](#-usage)
+1. [Demo](#-demo)
+2. [Features](#-features)
+3. [Tech Stack](#-tech-stack)
+4. [Architecture](#-architecture)
+5. [How It Works](#-how-it-works)
+6. [Components](#-components)
+7. [Project Structure](#-project-structure)
+8. [Installation](#-installation)
+9. [Environment Variables](#-environment-variables)
+10. [API Endpoints](#-api-endpoints)
+11. [Deployment](#-deployment)
+12. [Usage](#-usage)
 
 ---
 
