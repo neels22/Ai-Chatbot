@@ -21,7 +21,7 @@ A modern, full-stack AI chatbot application with real-time web search capabiliti
 
 Watch the AI Chatbot in action:
 
-https://github.com/neels22/Ai-Chatbot/assets/demo.mov
+![AI Chatbot Demo](demo.gif)
 
 *Experience real-time streaming responses, web search integration, and the beautiful glassmorphic UI in action!*
 
