@@ -12,7 +12,7 @@ A modern, full-stack AI chatbot application with real-time web search capabiliti
 
 ## 🌐 Live Deployment
 
-- **Frontend (Vercel)**: [https://ai-chatbot-client.vercel.app](https://ai-chatbot-client.vercel.app) *(Replace with your actual URL)*
+- **Frontend (Vercel)**: [https://ai-chatbot-client.vercel.app](https://perplexity.indraneelsarode.com) 
 - **Backend (Render)**: [https://ai-chatbot-server-e5v8.onrender.com](https://ai-chatbot-server-e5v8.onrender.com)
 
 ---
